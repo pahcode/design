@@ -35,10 +35,10 @@ $(document).on("click","#imgList li", function(){
 $(document).on("click","#pop .arr", function(){
     let num = $(this).parent().find(".imgBox img").attr("num");
     if($(this).hasClass("next")){
-        if(num == "1") num = "25";
+        if(num == "1") num = "29";
         else num = String(parseInt(num) - 1);
     }else{
-        if(num == "25") num = "1";
+        if(num == "29") num = "1";
         else num = String(parseInt(num) + 1);
     }
     let src
