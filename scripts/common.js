@@ -1,10 +1,9 @@
 $(window).on("load", function(){
-
 });
 
 // top Button
 $(document).on("click","#topBtn", function(){
-  window.scrollTo({top : 0, behavior: 'smooth'});
+    window.scrollTo({top : 0, behavior: 'smooth'});
 });
 
 // design Popup
@@ -34,11 +33,12 @@ $(document).on("click","#imgList li", function(){
 
 $(document).on("click","#pop .arr", function(){
     let num = $(this).parent().find(".imgBox img").attr("num");
+    let last = $("#imgList li").length;
     if($(this).hasClass("next")){
-        if(num == "1") num = "29";
+        if(num == "1") num = last;
         else num = String(parseInt(num) - 1);
     }else{
-        if(num == "29") num = "1";
+        if(num == last) num = "1";
         else num = String(parseInt(num) + 1);
     }
     let src
